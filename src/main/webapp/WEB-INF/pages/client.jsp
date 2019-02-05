@@ -13,6 +13,6 @@
 </head>
 <body>
 	<h1>Liste des clients</h1>
-
+	
 </body>
 </html>
