@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import tpVol.dao.DaoClient;
+import tpVolSpring.repository.ClientRepository;
 
 
 @Controller
@@ -18,10 +18,10 @@ public class clientController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
 	@Autowired
-	private DaoClient daoClient;
+	private ClientRepository clientRepository;
 	
 	@GetMapping("/reservations")
 	public ModelAndView list(@RequestParam(name="key") Long key) {
-		return new ModelAndView("listeReservations", "reservations", daoClient.findByKey(key).getReservations());
+		return new ModelAndView("listeReservations", "reservations", clientRepository.getOne(key).getReservations());
 	}
 }
