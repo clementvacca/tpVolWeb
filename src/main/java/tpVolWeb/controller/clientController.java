@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import tpVol.dao.DaoClient;
@@ -18,8 +20,8 @@ public class clientController extends HttpServlet {
 	@Autowired
 	private DaoClient daoClient;
 	
-	public ModelAndView list() {
-		
-		return new ModelAndView("listeReservation", "reservation", daoClient.findByKey(key));
+	@GetMapping("/reservations")
+	public ModelAndView list(@RequestParam(name="key") Long key) {
+		return new ModelAndView("listeReservations", "reservations", daoClient.findByKey(key).getReservations());
 	}
 }

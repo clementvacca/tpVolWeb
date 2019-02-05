@@ -13,6 +13,22 @@
 </head>
 <body>
 	<h1>Liste des clients</h1>
-	
+	<table class="table">
+		<tr>
+			<th>Numéro de réservation</th>
+			<th>Date</th>
+			<th>Passager</th>
+			<th>Vol</th>
+		</tr>
+		<c:forEach var="r" items="${reservations}">
+			<tr>
+				<td>${numeroReservation }</td>
+				<td>${dateReservation }</td>
+				<td>${passager }</td>
+				<td>${vol }</td>
+			</tr>
+		</c:forEach>
+		
+	</table>
 </body>
 </html>
