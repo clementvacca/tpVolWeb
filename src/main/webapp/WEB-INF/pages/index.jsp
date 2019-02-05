@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<button href="client.jsp"></button>
 
 </body>
 </html>
