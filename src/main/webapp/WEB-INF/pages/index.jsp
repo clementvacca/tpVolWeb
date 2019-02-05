@@ -10,6 +10,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+<<<<<<< HEAD
 <body class="container">
 	<h1>Selection vol</h1>
 	<form:form method="post" action="/client" modelAttribute="vol">
@@ -30,5 +31,10 @@
 			<form:button class="btn btn-success" type="submit">Réserver :</form:button>
 		</div>
 	</form:form>
+=======
+<body>
+	<button href="client.jsp"></button>
+
+>>>>>>> e595bcef1ea473c5ec05139eed01faad6c8b3ec7
 </body>
 </html>
